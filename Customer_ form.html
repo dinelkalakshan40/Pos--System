@@ -14,6 +14,7 @@
 </head>
 <body>
 
+
 <div class="container">
     <div class="table-wrapper">
         <div class="table-title">
@@ -25,7 +26,7 @@
                     <a href="#addCustomerModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Customer</span></a>
                     <a href="#deleteCustomerModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete</span></a>
                     <a href="#searchCustomerModal" class="btn btn-search" data-toggle="modal"><i class="material-icons" >search</i> <span>Search</span></a>
-                    <input type="text" id="serachbar" placeholder="search">
+                    <!--<input type="text" id="serachbar" placeholder="search">-->
                 </div>
             </div>
         </div>
@@ -230,6 +231,30 @@
                 <div class="modal-footer">
                     <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
                     <input type="submit" class="btn btn-danger" value="Delete">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Search Modal HTML -->
+<div id="searchCustomerModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form>
+                <div class="modal-header">
+                    <h4 class="modal-title">Search Customer</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Customer-ID</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                    <input type="submit" class="btn btn-info" value="Search">
                 </div>
             </form>
         </div>
