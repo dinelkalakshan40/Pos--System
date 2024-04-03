@@ -14,7 +14,7 @@ body {
 }
 .table-title {
     padding-bottom: 15px;
-    background: #435d7d;
+    background:#2dbd6e;
     color: #fff;
     padding: 16px 30px;
     margin: -20px -25px 10px;
@@ -85,7 +85,7 @@ table.table td a:hover {
     color: #2196F3;
 }
 table.table td a.edit {
-    color: #9c10cb;
+    color: #0dbb73;
 }
 table.table td a.delete {
     color: #F44336;
@@ -223,4 +223,11 @@ table.table .avatar {
 }
 #serachbar{
     margin-left: -100px;
+}
+@media all and (max-width: 420px){
+    .table-title{
+        width: 420px;
+    }
+
+
 }

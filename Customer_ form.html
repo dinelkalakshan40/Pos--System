@@ -11,8 +11,73 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="assets/style/customer_style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        header{
+            background: -webkit-linear-gradient(bottom, #2dbd6e, #a6f77b);
+            box-shadow: 2px  2px 2px 2px rgb(13, 187, 115);
+            font-size: medium;
+
+            width: 100%;
+            font-weight: bold;
+            font-family: Arial;
+        }
+        @media all and (max-width: 420px){
+            header{
+                width: 420px;
+            }
+
+        }
+
+    </style>
 </head>
 <body>
+<header>
+    <nav class="navbar navbar-expand-lg" >
+        <div class="container-fluid">
+            <!--            <a class="navbar-brand" href="#">Navbar</a>-->
+            <img class="navbar-brand" id="navbar-logo" src="/assets/imges/icons8-computer-70%20(1).png"  title="tomato header logo" alt="Pos-System">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="http://localhost:63342/pos-system/ForgotPassowrd_form.html?_ijt=9unn00jbkp56kr59dsvi3779a3&_ij_reload=RELOAD_ON_SAVE">Customer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://localhost:63342/pos-system/item_mange.html?_ijt=gbn0ndvp60nc7el7hg485g12fr&_ij_reload=RELOAD_ON_SAVE#">Item</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Orders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Order History</a>
+                    </li>
+
+
+                </ul>
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li id="SignupButtonH" class="nav-item" >
+                        <a id="SignupButton" class="nav-link active" aria-current="page" href="#">
+                            <i class="fa fa-user" ></i>
+                            SignUp
+                        </a>
+                    </li>
+                    <li id="LogoutButtonH" class="nav-item">
+                        <a id="LoginButton" class="nav-link active" aria-current="page" href="#">
+                            <i class="fa fa-sign-out"></i>
+                            Logout
+                        </a>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
 
 
 <div class="container">
@@ -129,7 +194,7 @@
             </tr>
             </tbody>
         </table>
-        <div class="clearfix">
+       <!-- <div class="clearfix">
             <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
             <ul class="pagination">
                 <li class="page-item disabled"><a href="#">Previous</a></li>
@@ -140,7 +205,7 @@
                 <li class="page-item"><a href="#" class="page-link">5</a></li>
                 <li class="page-item"><a href="#" class="page-link">Next</a></li>
             </ul>
-        </div>
+        </div>-->
     </div>
 </div>
 <!-- Add Modal HTML -->
