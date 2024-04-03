@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Orders">
+    <meta name="keywords" content="dinelka lakshan Pos System ">
+    <meta name="author" content="Dinelka Lakshan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Order_form</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/normalize.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/NavBar_Header.css">
+</head>
+
+    <style>
+
+        #Orders {
+
+            color: white;
+
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+
+        .breadcrumb {
+            top: 7px;
+            position: relative;
+        }
+
+        main>h3 {
+            position: relative;
+            margin: auto;
+            top: 25px;
+            left: 80px;
+            text-align: left;
+        }
+
+        #Invoice_Card_Header {
+            background-color: #0dbb73;
+        }
+
+        #Invoice_Detail {
+            position: relative;
+            width: 30vw;
+            padding: 25px;
+        }
+
+        #Item_Select {
+            position: relative;
+            width: 30vw;
+            padding: 25px;
+        }
+
+        #Item_Select_Header {
+            background-color: #0dbb73;
+        }
+
+        #Total {
+            position: relative;
+            width: 30vw;
+            padding: 25px;
+        }
+        #AddItem{
+            background-color: #0dbb73;
+        }
+        #Orderqty{
+            color: red;
+        }
+        #Tablehead{
+           background-color: #3775b2;
+        }
+        #PlaceOrder{
+            background-color: #0dbb73;
+        }
+
+
+        header{
+            background: -webkit-linear-gradient(bottom, #2dbd6e, #a6f77b);
+            box-shadow: 2px  2px 2px 2px rgb(13, 187, 115);
+            font-size: medium;
+            font-weight: bold;
+            font-family: Arial;
+        }
+
+    </style>
+
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg" >
+        <div class="container-fluid">
+            <!--            <a class="navbar-brand" href="#">Navbar</a>-->
+            <img class="navbar-brand" id="navbar-logo" src="/assets/imges/icons8-computer-70%20(1).png"  width="50" title="tomato header logo" alt="Pos-System">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="http://localhost:63342/pos-system/Customer_%20form.html?_ijt=ctbsd4navffudd1hlmcjljs80f&_ij_reload=RELOAD_ON_SAVE">Customer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="http://localhost:63342/pos-system/item_mange.html?_ijt=gbn0ndvp60nc7el7hg485g12fr&_ij_reload=RELOAD_ON_SAVE#">Item</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Orders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Order History</a>
+                    </li>
+
+                </ul>
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li id="SignupButtonH" class="nav-item" >
+                        <a id="SignupButton" class="nav-link active" aria-current="page" href="#">
+                            <i class="fa fa-user" ></i>
+                            SignUp
+                        </a>
+                    </li>
+                    <li id="LogoutButtonH" class="nav-item">
+                        <a id="LoginButton" class="nav-link active" aria-current="page" href="#">
+                            <i class="fa fa-sign-out"></i>
+                            Logout
+                        </a>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+        <br>
+<main>
+
+    <div id="Main_Card" class="card">
+
+
+
+
+        <div class="row row-cols-3">
+
+            <div class="col">
+                <div id="Invoice_Detail" class="card-body">
+                    <div class="card">
+                        <div id="Invoice_Card_Header" class="card-header">
+                            Order Details
+                        </div>
+                        <div class="card-body">
+
+                            <div class="container text-lg-start">
+                                <div class="row row-cols-2">
+                                    <div class="col">
+                                        <h6>Order ID</h6>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="D001" aria-label="" aria-describedby="basic-addon1">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <h6>Date</h6>
+                                        <div class="input-group mb-3">
+                                            <input type="date" class="form-control" placeholder="D001" aria-label="" aria-describedby="basic-addon1">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <h6>Customer</h6>
+                                        <!--<div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="D001" aria-label="" aria-describedby="basic-addon1">
+                                        </div>-->
+                                        <div class="dropdown">
+                                            <a class="btn btn-outline-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                CID-001
+                                            </a>
+
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">CID-002</a></li>
+                                                <li><a class="dropdown-item" href="#">CID-003</a></li>
+                                                <li><a class="dropdown-item" href="#">CID-004</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <h6>Name</h6>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="Dinelka" aria-label="" aria-describedby="basic-addon1">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <h6>Salary</h6>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="$10,000" aria-label="" aria-describedby="basic-addon1">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <h6>Address</h6>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="Colombo" aria-label="" aria-describedby="basic-addon1">
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div id="Item_Select" class="card-body">
+                    <div class="card">
+                        <div id="Item_Select_Header" class="card-header">
+                            Items Select
+                        </div>
+                        <div class="card-body">
+
+                            <div class="container text-lg-start">
+                                <div class="row row-cols-2">
+                                    <div class="col">
+                                        <h6>Item</h6>
+                                        <div class="dropdown">
+                                            <a class="btn btn-outline-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                I001
+                                            </a>
+
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">I002</a></li>
+                                                <li><a class="dropdown-item" href="#">I003</a></li>
+                                                <li><a class="dropdown-item" href="#">I004</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                   <!-- <div class="col">
+                                        <h6>Date</h6>
+                                        <div class="input-group mb-3">
+                                            <input type="date" class="form-control" placeholder="D001" aria-label="" aria-describedby="basic-addon1">
+                                        </div>
+                                    </div>-->
+                                    <div class="col">
+                                        <h6>Item-Name</h6>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="Biscult" aria-label="" aria-describedby="basic-addon1">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <h6>Price</h6>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="500.00" aria-label="" aria-describedby="basic-addon1">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <h6>Qty</h6>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="50" aria-label="" aria-describedby="basic-addon1">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <h6 id="Orderqty">Order Qty</h6>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="10" aria-label="" aria-describedby="basic-addon1">
+
+                                        </div>
+                                        <div class="d-grid gap-2" >
+                                            <button id="AddItem"  type="button" >Add Item
+                                        </button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div id="Total" class="card-body">
+                    <div class="card">
+                        <div class="card-body">
+                            <br>
+                            <h3>Total : 10050</h3>
+                            <h3>Sub Total : 945</h3>
+                            <br>
+                            <br>
+                            <div class="container text-lg-start">
+                                <div class="row">
+                                    <div class="col">
+                                        <h6>Cash</h6>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="5000" aria-label="" aria-describedby="basic-addon1">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <h6>Discount</h6>
+                                        <div class="input-group mb-3">
+                                            <input type="number" class="form-control" placeholder="10" aria-label="" aria-describedby="basic-addon1">
+                                        </div>
+                                    </div>
+                                    <h6>Balance</h6>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="4050" aria-label="" aria-describedby="basic-addon1">
+                                    </div>
+                                </div>
+                                <div class="d-grid gap-2">
+                                    <button type="button" id="PlaceOrder" class="btn btn-success">Place order</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <br><br>
+
+        <table class="table">
+            <thead class="table-primary" id="Tablehead">
+            <tr>
+                <th scope="col">Item Code</th>
+                <th scope="col">Item Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Total</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">I001</th>
+                <td>Cake</td>
+                <td>400</td>
+                <td>2</td>
+                <td>400</td>
+            </tr>
+            <tr>
+                <th scope="row">I002</th>
+                <td>Milo</td>
+                <td>140</td>
+                <td>2</td>
+                <td>280</td>
+            </tr>
+            <tr>
+                <th scope="row">I003</th>
+                <td >Cocacola</td>
+                <td>200</td>
+                <td>2</td>
+                <td>400</td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
